@@ -174,4 +174,4 @@ client.on("message", async message => {
 // DONE BY MOORZ .
 // CODES - COPYRIGHT
 
-
+client.login(process.env.BOT_TOKEN);
