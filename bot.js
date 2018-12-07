@@ -1,17 +1,10 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const prefix = "$";
+const prefix = "!";
 
 // ========================================== [ CONSTRUCTERS ] =========================================
 
-client.on("ready", async() => {
-    client.user.setGame("Loading...");
-console.log(`Back Online In ${client.guilds.size} Servers!`);
-console.log(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8\nInvite Me To Your Server!`);
-    setTimeout(() => {
-        client.user.setActivity(`${prefix}help | V 1.1`, {type: "WATCHING"});
-    }, 3000);
-});
+
 
 // ========================================== [ BROADCAST COMMANDS ] ====================================
 
@@ -147,7 +140,7 @@ client.on("message", async message => {
             .setAuthor(message.author.username, message.author.displayAvatarURL)
             .setThumbnail(message.author.avatarURL)
             .setTitle("**Click Here To Invite The Bot To Your Server :sparkling_heart:**")
-            .setURL(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8`);
+            .setURL(`https://discord.gg/babVNs8{client.user.id}&scope=bot&permissions=8`);
             message.channel.sendEmbed(invite);
     }
 });
@@ -163,7 +156,7 @@ client.on("message", async message => {
             معلومات عن السيرفر : ${prefix}server
             برودكاست للأونلاين فقط : ${prefix}bco
             يعرض لك عدد المتبندين من سيرفرك : ${prefix}banned
-            رابط سيرفر الدعم الفني : https://discord.gg/YEXcDXt 
+            رابط سيرفر الدعم الفني : https://discord.gg/babVNs8 
             **`);
             message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
     }
@@ -173,4 +166,3 @@ client.on("message", async message => {
 // CODES - COPYRIGHT
 
 
-client.login("NTA5NDQ4NTg2MzEyOTQxNTg5.DuNNow.vJW3YAdlYJNbPTVTX3DqVOPCNqY");
